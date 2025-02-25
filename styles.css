@@ -311,7 +311,13 @@ footer{
     color: white;
 }
 
-@media screen and ((max-width: 720px) or (max-height: 720px)){
+@media screen and ((max-width: 768px) or (max-height: 768px)){
+    .overlay{
+        visibility: hidden;
+    }
+    .banner img{
+        animation: none;
+    }
     .banner-title{
         border-radius: 0;
         top: 0;
@@ -320,13 +326,12 @@ footer{
         height: 100%;
         background-color: rgba(99, 65, 38, 0.2);
         text-shadow: 0 2px rgba(0, 0, 0, 0.5);
+        animation: none;
     }
     .main-page-navigation{
         border-bottom: 2px inset rgba(175, 184, 215, 1);
-        background: linear-gradient(to top,
-        rgba(175, 184, 215, 1) 0%,
-        rgb(87, 81, 104) 30%,
-        rgba(23, 22, 26, 1) 100%);
+        top: 0;
+        animation: none;
     }
     .main-page-navigation ul{
         width: 100%;
@@ -340,16 +345,21 @@ footer{
         font-size: calc(12px + 12*(100vw - 320px) / 880);
         font-weight: bolder;
     }
-    .pre-article{
+    .main-main{
         padding-top: 10px;
+    }
+    .pre-article{
         font-size: calc(10px + 12*(100vw - 320px) / 880);
+        animation: none;
     }
     .main-section article{
         display: block;
         margin-bottom: 20px;
     }
     .main-section h2{
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
         margin: 10px 0;
+        animation: none;
     }
     .main-section article img{
         max-width: 50%;
@@ -357,15 +367,17 @@ footer{
         margin: 0 auto;
         padding: 10px 0;
     }
+    .main-section article img:hover{
+        transform: none;
+    }
     .main-section article p{
         width: 100%;
         text-align: justify;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        animation: none;
     }
-    .main-main{
-        padding-bottom: 280px;
-    }
-    .pre-footer{
-        height: 280px;
+    #ghost{
+        opacity: 1;
+        transition: none;
     }
 }
